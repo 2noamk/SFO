@@ -1,0 +1,76 @@
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \begin{groupplot}[
+      group style={
+        group size=2 by 1,
+        horizontal sep=0.9cm,
+      },
+      width=5.0cm,
+      height=3.5cm,
+      tick label style={font=\scriptsize},
+      title style={font=\scriptsize},
+      xlabel style={yshift=4pt,font=\scriptsize},
+      ylabel style={yshift=-3pt,font=\scriptsize},
+      xlabel={Hilbert mode index $\ell$},
+      ylabel={Coefficient magnitude},
+      legend style={draw=none,font=\scriptsize},
+      legend columns=1,
+    ]
+      \nextgroupplot[
+        title={1D Diffusion Reaction},
+      ]
+      \addplot[thick] table[row sep=\\] {
+        ell y \\
+        1 2.0344992 \\
+        2 2.00368 \\
+        3 1.5870484 \\
+        4 1.1051441 \\
+        5 1.0237104 \\
+        6 1.167325 \\
+        7 1.2336972 \\
+        8 1.1005946 \\
+        9 0.86098617 \\
+        10 0.69441676 \\
+        11 0.67945987 \\
+        12 0.67440712 \\
+        13 0.60706371 \\
+        14 0.57316959 \\
+        15 0.65533209 \\
+        16 0.58808571 \\
+        17 0.54016036 \\
+        18 0.44686103 \\
+        19 0.52462894 \\
+        20 0.63001537 \\
+      };
+      \nextgroupplot[
+        title={2D Shallow Water},
+      ]
+      \addplot[thick] table[row sep=\\] {
+        ell y \\
+        1 0.48258135 \\
+        2 0.45599329 \\
+        3 0.3127279 \\
+        4 0.38140482 \\
+        5 0.46915141 \\
+        6 0.40440956 \\
+        7 0.33070013 \\
+        8 0.31235549 \\
+        9 0.27859277 \\
+        10 0.22541586 \\
+        11 0.21419625 \\
+        12 0.2352352 \\
+        13 0.20438558 \\
+        14 0.14561149 \\
+        15 0.19403258 \\
+        16 0.14084645 \\
+        17 0.18578768 \\
+        18 0.13477245 \\
+        19 0.13838045 \\
+        20 0.096348315 \\
+      };
+    \end{groupplot}
+  \end{tikzpicture}
+  \caption{Mean Frobenius norm of learned STU coefficient matrices $\|\Theta_\ell\|_F$ vs.\ Hilbert mode index $\ell$ (averaged across layers).}
+  \label{fig:hilbert-coeff-decay}
+\end{figure}
