@@ -1,14 +1,14 @@
-# **STU-NO**  
+# **SFO**  
 Learning PDE solution operators via an explicit, trainable SVD kernel layer  
 
 ---
 
 ## 🗺️ Repository layout
 ```text
-STUNO/
-├── STUNO/stu1d_mlp.py # 1-D core
-├── STUNO/stu2d_mlp.py # 2-D core
-├── STUNO/stu3d_mlp_vars.py # 3-D core
+SFO/
+├── SFO/stu1d_mlp.py # 1-D core
+├── SFO/stu2d_mlp.py # 2-D core
+├── SFO/stu3d_mlp_vars.py # 3-D core
 │
 ├── allen_cahn/
 │ └── stu_ac_mlp.py # driver
